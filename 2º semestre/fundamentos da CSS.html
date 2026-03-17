@@ -8,10 +8,38 @@
 
     <!-- CSS Interna-->
      <style>
-        
+        p {
+            text-align: center;
+            color: blue;
+            font-size: 30px;
+        }
+        #para1{
+            color: green;
+            padding: 10px 5px 10px 5px;
+        }
+        .elemento-com-borda {
+            color: blue;
+            text-align: left;
+            font-size: small;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        div{
+            color: brown;
+            background-color: grey;
+        }
      </style>
 </head>
 <body>
-    
+    <p>teste</p>
+    <p id="para1"> Teste para estilo de um id</p>
+    <h2 class="elemento-com-borda">
+        teste para um
+        <br>
+        estilo de classe
+    </h2>
+    <div>
+        Texto solto na DIV
+        <p>Texto do parágrafo que é "filho" da DIV</p>
+    </div>
 </body>
 </html>

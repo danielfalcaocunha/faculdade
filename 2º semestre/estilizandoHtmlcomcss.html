@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizando HTML com CSS</title>
+    <style>
+        #container{
+            background: #ccc;
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Nunito;
+        }
+        .texto-destaque{
+            font-weight: bold ;
+        }
+        ul li{
+            list-style: none;
+            margin-bottom: 5px;
+            display: inline;
+        }
+
+        #rgb{
+            background-color: rgb(255,0,51);
+        }
+        #rgba{
+            background-color: rgba(255,0,51,40%);
+        }
+        #hsl{
+            background-color: HSL(0,100%,50%);
+        }
+        #hsla{
+            background-color: HSLA(0,100%,50%,40%);
+        }
+        @font-face {
+            font-family: "Nunito";
+            src: url("Nunito-VariableFont_wght.woff2");
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Título Principal</h1>
+        <p class="texto-destaque">Texto ao qual o título se refere</p>
+        <ul>
+            <li>Ítem 1</li>
+            <li>Ítem 2</li>
+            <li>Ítem 3</li>
+            <li>Ítem 4</li>
+            <li>Ítem 5</li>
+        </ul>
+    </div>
+    <div id="novo-container">
+        <div id="rgb">
+            RGB - Red, Green, Blue
+        </div>
+        <div id="rgba">
+            RGBA
+        </div>
+        <div id="hsl">
+            HSL - Hue, Saturation and Lightness
+        </div>
+        <div id="hsla">
+            HSLA
+        </div>
+
+    </div>
+</body>
+</html>
