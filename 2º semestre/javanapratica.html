@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Java Script na prática</title>
+</head>
+<body>
+  <form onsubmit="return false;">
+    <label>Valor A</label> <input type="number" id="v1" step="any" />
+    <label>Valor B</label> <input type="number" id="v2" step="any" />
+    <label>Operação</label>
+    <select id="oper">
+      <option>Soma</option>
+      <option>Subtração</option>
+      <option>Multiplicação</option>
+      <option>Divisão</option>
+      <option>Potência</option>
+    </select>
+    <button type="button" id="btnExecutar">Executar</button>
+  </form>
+
+  <div id="resp">O resultado aparece aqui</div>
+
+  <script src="arquivo.js"></script>
+  <script>
+    const lerNumero = (id) => {
+      const n = parseFloat(document.getElementById(id).value);
+      return isNaN(n) ? null : n;
+    };
+
+    const executar = () => {
+      const a = lerNumero("v1");
+      const b = lerNumero("v2");
+      const oper = document.getElementById("oper").selectedIndex;
+
+      if (a === null || b === null) {
+        document.getElementById("resp").textContent = "Informe números válidos.";
+        return;
+      }
+
+      let resultado = null;
+      switch (oper) {
+        case 0: resultado = somar(a, b); break;
+        case 1: resultado = subtrair(a, b); break;
+        case 2: resultado = multiplicar(a, b); break;
+        case 3: resultado = dividir(a, b); break;
+        case 4: resultado = exponencial(a, b); break;
+      }
+
+      if (resultado === null) {
+        document.getElementById("resp").textContent = "Operação inválida ou não foi possível calcular.";
+      } else {
+        document.getElementById("resp").textContent = `O resultado da operação é: ${resultado}`;
+      }
+    };
+
+    document.getElementById("btnExecutar").addEventListener("click", executar);
+  </script>
+</body>
+</html>
