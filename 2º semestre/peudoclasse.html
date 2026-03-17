@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classe</title>
+    <style>
+        #container {
+            width: 1070px;
+            margin: 0 auto;
+            display : flex;
+            flex-direction: column;
+        }
+        #link:hover {
+            color: red;
+        }
+        #container-texto{
+            padding: 20px;
+            background-color: #fbff0091;
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+        }
+        #container-texto::first-line {
+            text-transform: uppercase;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <h1>PseudoClasses</h1>
+    <a href="#" id="link">Link</a>
+
+    <h1>PseudoElementos</h1>
+    <p id="container-texto">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deleniti excepturi tempore vitae, nesciunt magnam. Dolore sit aspernatur laborum cum fugit vel. Iure odio, rem sint at iste debitis doloribus!
+    </p>
+    </div>
+</body>
+</html>
