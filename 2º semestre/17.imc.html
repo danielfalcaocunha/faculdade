@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        .resultado{
+            font-size: small;
+        }
+    </style>
+</head>
+<script src="16.imc.js"></script>
+<body class="container">
+    <h1>Calculadora de IMC</h1>
+    <form class="form m-2" onsubmit="return false;">
+        <label class="form-label">Peso (KG)</label>
+        <input class="form-control" type="number" id="v1"/>
+        <label class="form-label">ALtura (M)</label> <input class="form-control" type="number" id="v2"/>
+        <button class="btn btn-primary m-2" type="button" id="btnExecutar">Executar</button>
+    </form>
+    <h2 class="resultado" id="resultado">preencha os dados acima e clique para ver o resultado</h2>
+    <script>
+        document.getElementById("btnExecutar").addEventListener("click", executar);
+    </script>
+</body>
+</html>
